@@ -33,6 +33,7 @@ def show():
         response = requests.post(url, json=controller_config)
         logger.info(response.status_code)
         logger.info(response.content)
+        logger.info(response.text)
 
 
 @repeat(every(10).seconds)
@@ -65,8 +66,12 @@ if __name__ == '__main__':
     controller_config = check_config()
     if controller_id == None:
         url = "http://127.0.0.1:9090/hello"
-        response = requests.post(url, data=controller_config)
-        logger.info(response)
+        try:
+            response = requests.post(url, data=controller_config)
+            logger.info(response.text)
+
+        except:
+            print("failed")
 
     # start routine 1 - Flask applicatie
     logger.info("Starting www on port 8080")

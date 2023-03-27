@@ -71,7 +71,7 @@ def get_controller_name():
 
     if platform.system() == "Darwin":
         logger.info("Running from MacOs")
-        hostname = "lc0001"
+        hostname = "lc9141"
     elif platform.system() == "Windows":
         logger.info("Running from Windows")
         hostname = "lc0001"
