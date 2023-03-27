@@ -30,10 +30,14 @@ def show():
     controller_config = utils.read_controller_config()
     if controller_id == None:
         url = "http://127.0.0.1:9090/hello"
-        response = requests.post(url, json=controller_config)
-        logger.info(response.status_code)
-        logger.info(response.content)
-        logger.info(response.text)
+        try:
+            response = requests.post(url, json=controller_config)
+            logger.info(response.status_code)
+            logger.info(response.content)
+            logger.info(response.text)
+        except:
+            print("auw")
+
 
 
 @repeat(every(10).seconds)
