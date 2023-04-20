@@ -1,3 +1,75 @@
+__version__ = '0.0.1'
+
+print(__version__)
+
+Skip
+to
+content
+Search or jump
+to…
+Pulls
+Issues
+Codespaces
+Marketplace
+Explore
+
+
+@JimmyTRT
+
+
+JimmyTRT
+/
+HealthClient
+Public
+Fork
+your
+own
+copy
+of
+JimmyTRT / HealthClient
+Code
+Issues
+Pull
+requests
+Actions
+Projects
+Wiki
+Security
+Insights
+More
+Beta
+Try
+the
+new
+code
+view
+HealthClient / main.py /
+
+
+@Jimvdb
+
+
+Jimvdb
+hello
+api
+get
+respons
+uuid
+…
+Latest
+commit
+ec9cff7
+3
+weeks
+ago
+History
+1
+contributor
+91
+lines(70
+sloc)  2.22
+KB
+
 import uvicorn as uvicorn
 import time
 import threading
@@ -25,7 +97,7 @@ def check_config():
 
 @repeat(every(10).seconds)
 def show():
-    #todo: poort nummer meegeven in de dict
+    # todo: poort nummer meegeven in de dict
     logger.info("try send config")
     controller_config = utils.read_controller_config()
     if controller_id == None:
@@ -37,7 +109,6 @@ def show():
             logger.info(response.text)
         except:
             print("auw")
-
 
 
 @repeat(every(10).seconds)
@@ -89,3 +160,23 @@ if __name__ == '__main__':
     # start routine 3 - leest en schrijft data naar de database en voert tijdgebonden functies uit
     threading.Thread(target=schedule).start()
     threading.Thread(target=check_calendar).start()
+Footer
+© 2023
+GitHub, Inc.
+Footer
+navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact
+GitHub
+Pricing
+API
+Training
+Blog
+About
+HealthClient / main.py
+at
+main · JimmyTRT / HealthClient
