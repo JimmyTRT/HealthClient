@@ -40,7 +40,7 @@ def show():
             logger.info(response.content)
             logger.info(response.text)
         except:
-            print("auw")
+            logger.error("server niet beschikbaar")
 
 
 @repeat(every(10).seconds)
@@ -92,23 +92,3 @@ if __name__ == '__main__':
     # start routine 3 - leest en schrijft data naar de database en voert tijdgebonden functies uit
     threading.Thread(target=schedule).start()
     threading.Thread(target=check_calendar).start()
-Footer
-© 2023
-GitHub, Inc.
-Footer
-navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact
-GitHub
-Pricing
-API
-Training
-Blog
-About
-HealthClient / main.py
-at
-main · JimmyTRT / HealthClient
